@@ -22,33 +22,71 @@
         gap: 10px;
         font-family: helvetica;
       }
+      .ul .list-item {
+        padding: 10px;
+        /* margin-top: 50px; */
+        display: flex;
+        gap: 20px;
+        justify-content: start;
+        align-items: center;
+        box-shadow: -1px 21px 21px -17px rgba(0, 0, 0, 0.18);
+        -webkit-box-shadow: -1px 21px 21px -17px rgba(0, 0, 0, 0.18);
+        -moz-box-shadow: -1px 21px 21px -17px rgba(0, 0, 0, 0.18);
+        position: relative;
+        font-size: 22px;
+      }
+      .list-item .list-number {
+        border: 2px solid red;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .list-number::before {
+        content: "";
+        position: absolute;
+        bottom: -48px;
+        left: 50%;
+        transform: translateY(-50%);
+        width: 2px;
+        height: 32px;
+        background-color: red;
+      }
+      .list-item:last-child .list-number::before {
+        width: 0;
+        height: 0;
+        background: none;
+      }
     </style>
   </head>
   <body>
     <div class="list-cards">
       <div class="list">
-        <ul class="ul">
-          <li>
+        <div class="ul">
+          <div class="list-item">
             <span class="list-number">1</span
             ><span>FREE assessment & custom strategy</span>
-          </li>
-          <li>
+          </div>
+          <div class="list-item">
             <span class="list-number">2</span
             ><span>We find you profitable property deals</span>
-          </li>
-          <li>
+          </div>
+          <div class="list-item">
             <span class="list-number">3</span
             ><span>We help you negotiate, buy and settle</span>
-          </li>
-          <li>
+          </div>
+          <div class="list-item">
             <span class="list-number">4</span
             ><span>We build your property management team</span>
-          </li>
-          <li>
+          </div>
+          <div class="list-item">
             <span class="list-number">5</span
             ><span>You get ongoing support and advice</span>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
   </body>
